@@ -3,6 +3,8 @@ set -e
 
 echo "Install Turbo VNC server"
 
+apt-get update && apt-get install -y libxt6 libxext6 libxv1 libglu1-mesa libxtst6
+
 # Fetch and install VirtualGL
 wget https://sourceforge.net/projects/virtualgl/files/2.6.4/virtualgl_2.6.4_amd64.deb/download -O vgl.deb && \
     dpkg -i vgl.deb && \
